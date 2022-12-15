@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: prototipo.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 05/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 05/03/2021
+OBJETIVO: Comprobar los prototipos
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>objetos</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        var Coche = function () {
+            this.zigzaguear = function () {
+                document.write('zizaguea peligrosamente');
+            }
+        }
+
+        Coche.prototype.frenar = function () {
+            document.write('El coche frena');
+        }
+        Coche.prototype.numRuedas = 4;
+
+        var simca1100 = new Coche();
+
+        var renault = new Coche();
+
+        /* No son la misma */
+        document.write(simca1100.zigzaguear == renault.zigzaguear);
+
+        /* Son la misma hechas con prototype */
+        document.write(simca1100.frenar == renault.frenar);
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

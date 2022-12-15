@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: objetos.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 05/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 05/03/2021
+OBJETIVO: Crear tabla de entrada múltiple
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>objetos</title>
+</head>
+
+<body>
+
+    <script>
+        let timer = 0;
+        let visualizar;
+        let cronometro;
+        let contadorLaps = 0;
+
+        // Inicia el cronómetro
+        function startCronometro() {
+            cronometro = setInterval(avanzar, 1000);
+            visualizar = setInterval(mostrar, 1000);
+        }
+
+        // Detiene el cronómetro
+        function stopCronometro() {
+            clearInterval(cronometro);
+            clearInterval(visualizar);
+        }
+
+        // Continúa el conteo del cronómetro
+        function continuarCronometro() {
+            clearInterval(cronometro);
+            clearInterval(visualizar);
+            clearLap();
+            cronometro = setInterval(avanzar, 1000);
+            visualizar = setInterval(mostrar, 1000);
+        }
+
+        // Resetea el cronómetro
+        function resetCronometro() {
+            timer = 0;
+            clearInterval(visualizar);
+            clearInterval(cronometro);
+            clearLap();
+            clearLapVueltas();
+            mostrar();
+        }
+
+        // El cronómetro sigue avanzando pero deja de mostrarlo en la pantalla
+        function lapCronometro() {
+            contadorLaps++;
+            clearInterval(visualizar);
+            document.getElementById("lap").innerHTML = 'LAP<br>'; // Muestra texto LAP
+            document.getElementById("lapLista").innerHTML += 'LAP ' + contadorLaps + ' = ' + timer + ' s.<br>';
+        }
+
+        // Limpia el mensaje LAP de la pantalla
+        function clearLap() {
+            document.getElementById("lap").innerHTML = '';
+        }
+
+        function clearLapVueltas() {
+            document.getElementById("lapLista").innerHTML = '';
+        }
+
+        // Suma una unidad al contador
+        function avanzar() {
+            timer++;
+        }
+
+        // Muestra el contador del cronómetro
+        function mostrar() {
+            document.getElementById("tiempoActual").innerHTML = timer;
+        }
+
+        // Desactiva los botones que se pasan como parámetros
+        function desactivarPorId(idButton) {
+            var idDeUnButton = idButton.split(",");
+            for (let i = 0; i < idDeUnButton.length; i++) {
+                var boton = document.getElementById(idDeUnButton[i]);
+                boton.disabled = true;
+            }
+        }
+
+        // Activa todos los botones
+        function activarBotones() {
+            var boton = document.getElementsByTagName("button");
+            for (let i = 0; i < boton.length; i++) {
+                boton[i].disabled = false;
+            }
+        }
+    </script>
+
+    <button id="start" onclick="startCronometro();activarBotones();desactivarPorId('start,continuar');">Iniciar</button>
+    <button id="continuar"
+        onclick="continuarCronometro();activarBotones();desactivarPorId('start,continuar');">Continuar</button>
+    <button onclick="stopCronometro();activarBotones();desactivarPorId('start');">Parar</button>
+    <button onclick="resetCronometro();activarBotones();desactivarPorId('continuar,lapButton');">Resetear</button>
+    <button id="lapButton" onclick="lapCronometro();activarBotones();desactivarPorId('start,lapButton');">LAP</button>
+
+    <br /><br /><br />
+    <div id="tiempoActual">0</div>
+    <div id="lap"></div>
+    <div id="lapLista"></div>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

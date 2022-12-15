@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: tablaMultiple.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 05/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 05/03/2021
+OBJETIVO: Crear tabla de entrada múltiple
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>tablaMultiple</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        var tablaMultiple = new Array(5);
+        var numLinea, numColumna;
+        var valor;
+
+        /* Valores de las variables */
+        for (numLinea = 0; numLinea < tablaMultiple.length; numLinea++) {
+            tablaMultiple[numLinea] = new Array(5);
+        }
+
+        /* Cálculos */
+        for (numLinea = 0; numLinea <= 2; numLinea++) {
+            for (numColumna = 0; numColumna <= 3; numColumna++) {
+                valor = Math.floor(prompt('Pon números: [' + numLinea + '][' + numColumna +
+                    ']'));
+                tablaMultiple[numLinea][numColumna] = valor;
+            }
+        }
+
+        /* Puesta a 0 de los totales */
+        for (numLinea = 0; numLinea <= 3; numLinea++) {
+            tablaMultiple[numLinea][4] = 0;
+        }
+        for (numColumna = 0; numColumna <= 4; numColumna++) {
+            tablaMultiple[3][numColumna] = 0;
+        }
+
+        /* Cálculo de los totales */
+        for (numLinea = 0; numLinea <= 2; numLinea++) {
+            for (numColumna = 0; numColumna <= 3; numColumna++) {
+                tablaMultiple[numLinea][4] += tablaMultiple[numLinea][numColumna];
+                tablaMultiple[3][numColumna] += tablaMultiple[numLinea][numColumna];
+                tablaMultiple[3][4] += tablaMultiple[numLinea][numColumna];
+            }
+        }
+
+        /* Mostrar resultados */
+        document.write('<table>');
+        document.write('<th></th><th></th><th></th><th></th><th>Total</th>');
+        for (numLinea = 0; numLinea <= 3; numLinea++) {
+            document.write('<tr>');
+            for (numColumna = 0; numColumna <= 4; numColumna++) {
+                document.write('<td>' + tablaMultiple[numLinea][numColumna] + '</td>');
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

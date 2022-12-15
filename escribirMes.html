@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: escribirMes.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 03/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 03/03/2021 
+OBJETIVO: Muestra el mes al introducir un número por teclado
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>Letras en una palabra</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        let numMes;
+
+        /* Valores de las variables */
+        numMes = parseInt(prompt('Introduce el número del mes'));
+
+        /* Cálculos */
+        switch (numMes) {
+            case 1:
+                mesLetra = 'Enero';
+                break;
+            case 2:
+                mesLetra = 'Febrero';
+                break;
+            case 3:
+                mesLetra = 'Marzo';
+                break;
+            case 4:
+                mesLetra = 'Abril';
+                break;
+            case 5:
+                mesLetra = 'Mayo';
+                break;
+            case 6:
+                mesLetra = 'Junio';
+                break;
+            case 7:
+                mesLetra = 'Julio';
+                break;
+            case 8:
+                mesLetra = 'Agosto';
+                break;
+            case 9:
+                mesLetra = 'Septiembre';
+                break;
+            case 10:
+                mesLetra = 'Octubre';
+                break;
+            case 11:
+                mesLetra = 'Noviembre';
+                break;
+            case 12:
+                mesLetra = 'Diciembre';
+                break;
+            default:
+                document.write("<p>Error en la entrada del mes</p>")
+        }
+
+        /* Mostrar resultados */
+        document.write("<p>El número del mes " + numMes + " corresponde a : " + mesLetra + "</p>");
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: paresEnTabla.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 04/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 04/03/2021 
+OBJETIVO: Cuenta los números pares que hay en una tabla introducida por teclado
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>Letras en una palabra</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        let mumPares;
+        var tabla = new Array;
+
+        /* Valores de las variables */
+        numPares = 0;
+
+        /* Cálculos */
+        for (let i = 0; i < 5; i++) {
+            tabla[i] = Number(prompt('Pon cinco números: (' + (i + 1) + ')'));
+            if (tabla[i] % 2 == 0) {
+                numPares += 1;
+            }
+        }
+
+        /* Mostrar resultados */
+        document.write('<p>La tabla ' + tabla + ' tiene ' + numPares + ' números pares</p>');
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

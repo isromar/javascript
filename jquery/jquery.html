@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Eventos</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <form class="mt-4" id="newEvent" name="newEvent" method="post">
+      <div id="add-text">
+        <input type="text">
+        <button>Add</button>
+      </div>
+      <div id="print-text">
+      </div>
+
+      <div class="cuadrado">
+        <button class="in">Pinchame</button>
+      </div>
+
+      <div class="viajes">
+        <a href="#">More info</a>
+        <div class="more-info">
+          <p>Este es más información</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="cuadrado" id="cuadrado1"></div>
+        <div class="cuadrado" id="cuadrado2"></div>
+        <div class="cuadrado" id="cuadrado3"></div>
+      </div>
+
+      <div id="example" class="container">
+        <select id="place">
+          <option value="">Elige</option>
+          <option value="santiago" data-price="100">Santiago</option>
+          <option value="madrid" data-price="180">Madrid</option>
+        </select>
+        <button>Pick</button>
+      </div>
+
+      <div id="example2" class="container">
+        <select id="place2">
+          <option value="">Elige</option>
+          <option value="santiago" data-price="100">Santiago</option>
+          <option value="madrid" data-price="180">Madrid</option>
+        </select>
+      </div>
+
+      <div id="result" class="container">
+      </div>
+
+      <div id="enlace">
+        <a href="#">Clicar</a>
+      </div>
+
+      <a href="#">Clicar</a>
+
+      <div id="escribir">
+        <input type="text" placeholder="Escribe">
+      </div>
+
+      <div id="result2" class="container">
+      </div>
+
+      <div class="listado">
+        <ul>
+          <li>Lista 1</li>
+          <li>Lista 2</li>
+        </ul>
+      </div>
+
+      <div class="form-control">
+        <p>Form control</p>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Descripción</label>
+        <input type="text" class="form-control" id="description" name="description" placeholder="Descripción de nombre*"
+          required><span id="errorDescription" class="error ocultar">Campo requerido</span>
+      </div>
+
+      <button type="text" class="btn btn-primary" id="anyadir" name="anyadir">Añadir</button>
+    </form>
+  </div>
+
+  <script type="text/javascript" src=".\js\jquery-3.6.1.js"></script>
+  <script type="text/javascript" src=".\js\scripts.js"></script>
+
+</body>
+
+</html>

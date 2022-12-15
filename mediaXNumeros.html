@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: escribirMes.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 03/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 03/03/2021 
+OBJETIVO: Calcula la media de una serie de números introducidos por teclado, finaliza cuando se introduce un 0
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>Letras en una palabra</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        let numero, suma, media, contador;
+
+        /* Valores de las variables */
+        contador = 0;
+        suma = 0.0;
+
+        do {
+            numero = parseFloat(prompt('Introduce números (sale con 0) (' + (contador + 1) + ") : "));
+            console.log('numero: ' + numero);
+            suma += numero;
+            contador++;
+        } while (numero != 0)
+
+        /* Cálculos */
+        media = suma / contador;
+
+        /* Mostrar resultados */
+        document.write("<p>La media de los " + (contador - 1) + " números es: " + media + "</p>");
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

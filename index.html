@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+</head>
+
+<!-- Inicio del body del archivo html con código Javascript -->
+
+<body>
+    <h1>Inicio procesamiento Javascript</h1>
+    <!-- Inicio del script de Javascript -->
+    <script>
+        /* Calculo de superficie de círculos */
+        /* Declaro variables y les asigno valores */
+        let radio1, radio2, superficie1, superficie2, diferenciaSuperficies, pi
+        radio1 = 5.5
+        radio2 = 3.5
+        pi = 3.14159
+
+        /* Cálculos de las superficies y diferencia entre ellas */
+        superficie1 = pi * radio1 ** 2;
+        superficie2 = pi * radio2 ** 2;
+        diferenciaSuperficies = superficie1 - superficie2;
+
+        /* Saca por pantalla el resultado */
+        document.write('Superficie 1: ' + superficie1 + ' m');
+        document.write('Superficie 2: ' + superficie2 + ' m');
+        document.write('Diferencia: ' + diferenciaSuperficies + ' m');
+    </script>
+    <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+
+</body>
+
+</html>

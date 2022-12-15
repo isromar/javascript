@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.form-control.is-valid~.invalid-feedback {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
+
+nav {
+    margin-bottom: 2%;
+}
+
+.valida {
+    border-color: limegreen;
+}
+
+.invalida {
+    border-color: red;
+}
+
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: inline-block;
+    color: red;
+    font-size: smaller;
+}
+
+#lista {
+    list-style: none;
+    text-decoration: none;
+}
+
+#lista>li {
+    width: 200px;
+    margin-right: 40px;
+    float: left;
+    margin-bottom: 40px;
+}
+
+.precio,
+.comprar {
+    float: right;
+}
+
+div.secundario {
+    background-color: #eee;
+    border-top: 1px solid #bbb;
+    color: #aaa;
+}
+
+div.total {
+    border: 1px solid #bbb;
+}
+
+#result {
+    color: red;
+}
+
+.form-control:nth-of-type(even) {
+    color: chocolate;
+}
+
+.negrita {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cornflowerblue
+}
+
+.rosa {
+    background-color: pink !important;
+}
+
+.azul {
+    color: blue;
+    background-color: lightskyblue;
+}
+
+.cuadrado {
+    width: 100px;
+    height: 100px;
+    background-color: darkmagenta;
+    margin-bottom: 1%;
+}
+
+.container {
+    height: 100px;
+    background-color: khaki;
+}
+
+#enlace {
+    height: 50px;
+    ;
+}
+
+#print-text>div {
+    background-color: aquamarine;
+    width: 20%;
+    margin-bottom: 1%;
+}
+
+#print-text .remove {
+    color: crimson;
+    float: right;
+    padding-right: 5%;
+}
+
+#print-text .remove:hover {
+    cursor: pointer;
+}
+.viajes{
+    background-color: lightcoral;
+}
+.more-info{
+    display: none;
+}

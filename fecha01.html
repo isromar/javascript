@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: objetos.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 05/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 05/03/2021
+OBJETIVO: Crear tabla de entrada múltiple
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>objetos</title>
+</head>
+
+<body>
+
+    <script>
+        var fechaDeHoy = new Date();
+        /* Método getDate -> devuelve el nº del día del mes de la fecha de sistema */
+        document.write(fechaDeHoy.getDate() + "<br>");
+
+        /* Método getDay -> devuelve el nº del día en la semana de 0 a 6 de la fecha de sistema */
+        document.write(fechaDeHoy.getDay() + "<br>");
+
+        document.write(fechaDeHoy.setDate(15) + "<br>");
+        document.write(fechaDeHoy.getDate() + "<br>");
+        document.write(fechaDeHoy.getMonth() + "<br>");
+
+        fechaDeHoy.setMonth(fechaDeHoy.getMonth() - (1));
+        document.write(fechaDeHoy.getMonth() + "<br>");
+        document.write(fechaDeHoy.toLocaleDateString() + "<br>");
+        document.write(fechaDeHoy.toLocaleTimeString());
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: prototipo.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 05/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 05/03/2021
+OBJETIVO: Comprobar los prototipos
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>objetos</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        var Vehiculo = function () {}
+
+        Vehiculo.prototype.acelerar = function () {
+            document.write('acelera<br>')
+        }
+
+        Vehiculo.prototype.frenar = function () {
+            document.write('frena<br>')
+        }
+
+        var Coche = function () {}
+
+        /* Copia atributos y métodos */
+        for (clave in Vehiculo.prototype) {
+            Coche.prototype[clave] = Vehiculo.prototype[clave];
+        }
+
+        Coche.prototype.frenar = function(){
+            document.write('frenar<br>')
+        }
+
+        var simca1100 = new Coche();
+
+        simca1100.acelerar();
+        simca1100.frenar();
+
+        Vehiculo.prototype.aparcar = function(){
+            document.write('aparca<br>');
+        }
+
+        /* Como se ha creado el método en el prototipo de Vehiculo después de heredar, no lo encuentra */
+        simca1100.aparcar();
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+
+</body>
+
+</html>

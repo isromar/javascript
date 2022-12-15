@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jscs": "^3.0.7",
+    "readline-sync": "^1.4.10"
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: sacarIniciales.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 03/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 03/03/2021 
+OBJETIVO: Se entra un nombre y apellido por separado y muestra las iniciales
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>Letras en una palabra</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        let nombre, apellido, inicialNombre, inicialApellido;
+
+        /* Valores de las variables */
+        nombre = prompt('Introduce el nombre: ');
+        apellido = prompt('Introduce el apellido: ');
+
+        /* Cálculos */
+        inicialNombre = nombre.charAt(0).toUpperCase();
+        inicialApellido = apellido.substring(2,4).toUpperCase();
+
+        /* Mostrar resultados */
+        document.write("<p>Las iniciales de  " + nombre + " " + apellido + " son " + inicialNombre + inicialApellido + "</p>");
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

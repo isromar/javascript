@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: escribirMes.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 03/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 03/03/2021 
+OBJETIVO: Muestra el mes al introducir un número por teclado
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>Letras en una palabra</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        let numero, suma, media, contador;
+
+        /* Valores de las variables */
+        contador = 0;
+        suma = 0.0;
+
+        while (contador < 10) {
+            numero = Number(prompt('Introduce 10 números (' + (contador + 1) + ") : "));
+            suma += numero;
+            contador++;
+        }
+        /* Cálculos */
+        media = suma / contador;
+
+        /* Mostrar resultados */
+        document.write("<p>La media de los " + contador + " números es: " + media + "</p>");
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: esfera.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 03/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 03/03/2021 
+OBJETIVO: Calcular y mostrar la superficie y volumen de una esfera con el radio introducido por el usuario
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>Esfera</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        let radio, superficie, volumen;
+
+        /* Valores de las variables */
+        radio = Number(prompt('radio (cm): '));
+
+        /* Cálculos */
+        superficie = 4 * Math.PI * radio ** 2;
+        volumen = 4 / 3 * Math.PI * radio ** 3;
+
+        superficie = superficie.toFixed(3);
+        volumen = volumen.toFixed(3);
+
+        /* Mostrar resultados */
+        document.write("<p>Superficie de la esfera: " + superficie + "cm ^ 2 </p>");
+        alert("Volumen de la esfera (cm): " + volumen + " cm^3");
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: polinomioSegundoGrado.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 03/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 03/03/2021 
+OBJETIVO: Calcula las raices de un polinomio introducido por teclado
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>Letras en una palabra</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        let a, b, c, delta, solucion1, solucion2;
+
+        /* Valores de las variables */
+        a = parseInt(prompt('Introduce el valor de a: '));
+        b = parseInt(prompt('Introduce el valor de b: '));
+        c = parseInt(prompt('Introduce el valor de c: '));
+
+        /* Visualización de los datos */
+        document.write("<p>Valor de a: " + a + "</p>");
+        document.write("<p>Valor de b: " + b + "</p>");
+        document.write("<p>Valor de c: " + c + "</p>");
+
+        /* Cálculos */
+        delta = b ** 2 - (4 * a * c);
+        solucion1 = (-b + Math.sqrt(delta)) / (2 * a);
+        solucion2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+        /* Mostrar resultados */
+        if (delta < 0) {
+            alert("No tiene soluciones reales");
+        } else {
+            if (0 == delta) {
+                alert("Tiene solo una solución");
+                document.write("<p>Solución:  " + solucion1 + "</p>");
+            }
+            else {
+                document.write("<p>Solución 1:  " + solucion1 + "</p>");
+                document.write("<p>Solución 2:  " + solucion2 + "</p>");
+            }
+        }
+
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

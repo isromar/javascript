@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: objetos.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 05/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 05/03/2021
+OBJETIVO: Crear tabla de entrada múltiple
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>objetos</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        var Coche = function () {
+            /* Atributos del objeto */
+            this.tieneMotor = true;
+            /* Métodos del objeto */
+            this.avanzar = function () {
+                document.write("avanza");
+            }
+        }
+
+        /* Instanciación de un objeto simca1100 a través del constructor Coche */
+        var simca1100 = new Coche();
+
+        /* Visualización del atributo tieneMotor del objeto simca1100 */
+        document.write(simca1100.tieneMotor);
+
+        /* Visualización de la función avanzar del objeto simca1100 */
+        simca1100.avanzar();
+
+        /* Valores de las variables */
+
+        /* Cálculos */
+
+        /* Mostrar resultados */
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

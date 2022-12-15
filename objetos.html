@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: objetos.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 05/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 05/03/2021
+OBJETIVO: Crear tabla de entrada múltiple
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>objetos</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+
+        /* Valores de las variables */
+
+        /* Cálculos */
+
+        /* Mostrar resultados */
+        function abrirVentana() {
+            miVentana = window.open("", "VENTANA_01", "width=500,height=400,resizable=false,left=500");
+            tuVentana = window.open("", "VENTANA_02", "width=300,height=400,resizable=false,left=400");
+        }
+
+        function cerrarVentana() {
+            miVentana.close();
+            tuVentana.close();
+        }
+    </script>
+
+    <button onclick="abrirVentana()">Abrir</button>
+    <button onclick="cerrarVentana()" width="400">Cerrar</button>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

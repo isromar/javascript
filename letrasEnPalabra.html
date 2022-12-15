@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: letrasEnPalabra.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 03/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 03/03/2021 
+OBJETIVO: Se entra un nombre y muestra el número de letras
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>Letras en una palabra</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        let letrasEnPalabra, cantidad, palabra;
+
+        /* Valores de las variables */
+        palabra = prompt('Introduce una palabra: ');
+
+        /* Cálculos */
+        letrasEnPalabra = palabra.length;
+
+        /* Mostrar resultados */
+        document.write("<p>La palabra " + palabra + " tiene " + letrasEnPalabra + " letras");
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

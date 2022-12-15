@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/Ejercicio2.css">
+    <title>Ejercicio 2</title>
+</head>
+
+<script>
+    let lista = [];
+    let elemento;
+    do {
+        elemento = parseFloat(prompt('Pon numeros (0 salir): '));
+        document.write(elemento);
+        lista.push(elemento);
+        document.write('lista'+lista);
+
+    } while (elemento != 0);
+
+    document.write('Lista : ' + lista);
+</script>
+
+</html>

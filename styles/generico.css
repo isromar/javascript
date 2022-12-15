@@ -1,0 +1,45 @@
+p {
+    font-size: 1.5em;
+}
+
+a {
+    font-size: 1.5em;
+    color: chocolate;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color:darkkhaki;
+}
+
+div#tiempoActual {
+    width: 180px;
+    height: 50px;
+    background-color:darkslategrey;
+    color: aliceblue;
+    text-align: center;
+    line-height: 1.5em;
+    margin-left: 10%;
+    font-size: 2em;
+}
+
+div#lap {
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    line-height: 1.5em;
+    margin-left: 10%;
+    font-size: 2em;
+}
+
+div#lapLista {
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    line-height: 1.5em;
+    margin-left: 10%;
+    font-size: 1em;
+    color:green;
+    font-weight: 600;
+}

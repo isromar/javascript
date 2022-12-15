@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: objetos.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 05/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 05/03/2021
+OBJETIVO: Crear tabla de entrada múltiple
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>objetos</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        function mostrarHoraActual() {
+            var miHoraReferencia = new Date();
+            var hhmmss = miHoraReferencia.toLocaleTimeString();
+            document.getElementById("horaActual").innerHTML = hhmmss;
+        }
+        /* Valores de las variables */
+
+        /* Cálculos */
+
+        /* Mostrar resultados */
+        alert("Mostrar hh:mm:ss")
+
+        var miHora = setInterval(function () {
+            mostrarHoraActual()
+        }, 1000);
+    </script>
+
+    Hora actual: <span id="horaActual">Hora</span>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>

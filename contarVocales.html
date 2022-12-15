@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+NOMBRE ARCHIVO: escribirMes.html
+CREADOR: Isabel Ródenas
+FECHA CREACIÓN: 03/03/2021
+FECHA ÚLTIMA MODIFICACIÓN: 04/03/2021 
+OBJETIVO: Calcula la media de una serie de números introducidos por teclado, finaliza cuando se introduce un 0
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/generico.css">
+    <title>Letras en una palabra</title>
+</head>
+
+<body>
+
+    <script>
+        /* Declaración de variables */
+        let palabra, vocales;
+
+        /* Valores de las variables */
+        palabra = prompt("Introduce una palabra: ");
+        vocales = 0;
+
+        /* Cálculos */
+        palabraMayusculas = palabra.toUpperCase();
+
+        for (let i = 0; i < palabra.length; i++) {
+            switch (palabraMayusculas.charAt(i)) {
+                case "A":
+                    vocales += 1;
+                    break;
+                case "E":
+                    vocales += 1;
+                    break;
+                case "I":
+                    vocales += 1;
+                    break;
+                case "O":
+                    vocales += 1;
+                    break;
+                case "U":
+                    vocales += 1;
+                    break;
+            }
+        }
+
+        /* Mostrar resultados */
+        document.write('La palabra ' + palabra + ' tiene ' + vocales + ' vocales');
+    </script>
+
+    <br /><br /><br />
+    <center>
+        <a href="Javascript:window.location='view-source:' + window.location">Código fuente</a>
+    </center>
+
+</body>
+
+</html>
