@@ -22,7 +22,7 @@ Este sitio web permite buscar películas a través de peticiones AJAX.
 - [OMDb API](http://www.omdbapi.com/)
 
 ## Image preview
-![Preview](https://raw.githubusercontent.com/isromar/javascript/main/dapi_rest_omdb/preview.JPG)
+![Preview](https://raw.githubusercontent.com/isromar/javascript/main/api_rest_omdb/preview.JPG)
 
 ## Autor
 Isabel Rodenas Marin
